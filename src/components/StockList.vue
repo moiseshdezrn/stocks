@@ -220,23 +220,7 @@ export default {
       loading: false,
     }),
     methods:{
-      getStocksFromSymbol: async function () {
-        let url = `https://yahoo-finance-low-latency.p.rapidapi.com/v8/finance/chart/KOF?interval=1d&range=1y&lang=es`;
-        let headers = {
-          "x-rapidapi-key": "f841852524msh2a5cf8d459bb530p1e040ajsn68fbf3d97bca",
-          "x-rapidapi-host": "yahoo-finance-low-latency.p.rapidapi.com"
-        };
-        try{
-          let response = await fetch(url, {
-            "method": "GET",
-            "headers": headers
-          });
-          let responseJson = await response.json();
-          this.stockHistory = responseJson;
-        }catch(e){
-          console.error(e);
-        }
-      },
+        
       getStock: function (item) {
         this.stockSymbol = item.symbol; 
         this.showDialog = false;
@@ -244,14 +228,13 @@ export default {
       getStockHistory: async function() {
         let apiOptions = this.API_URL.YAHOO_FINANCE;
         let apiKey = apiOptions.api_key.find(item=>item.status);
-        
         let apiURL = `${apiOptions.base}${apiOptions.history}/${this.stockSymbol}/${this.period}`;
         try{
             this.loading = true;
             let response = await fetch(apiURL, {
                 "method": "GET",
                 "headers": {
-                    "x-rapidapi-key": apiKey.key,
+                    "x-rapidapi-key": decodeURIComponent(escape(window.atob( apiKey.key ))),
                     "useQueryString": true,
                 }
             });

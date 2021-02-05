@@ -16,7 +16,7 @@ Vue.mixin( {
           autocomplete: '/v6/finance/autocomplete',
           api_key: [
             {
-              key: 'f841852524msh2a5cf8d459bb530p1e040ajsn68fbf3d97bca',
+              key: 'Zjg0MTg1MjUyNG1zaDJhNWNmOGQ0NTliYjUzMHAxZTA0MGFqc242OGZiZjNkOTdiY2E=',
               status: 1,
             }
           ]
@@ -26,7 +26,7 @@ Vue.mixin( {
           history: '/hi/history',
           api_key:[
             {
-              key: 'f841852524msh2a5cf8d459bb530p1e040ajsn68fbf3d97bca',
+              key: 'Zjg0MTg1MjUyNG1zaDJhNWNmOGQ0NTliYjUzMHAxZTA0MGFqc242OGZiZjNkOTdiY2E=',
               status: 1,
             }
           ]
