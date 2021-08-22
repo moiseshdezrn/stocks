@@ -109,7 +109,7 @@ export default {
 				let response = await fetch(apiURL, {
 					"method": "GET",
 					"headers": {
-						"x-rapidapi-key": decodeURIComponent(escape(window.atob( apiKey.key ))),
+						"x-api-key": decodeURIComponent(escape(window.atob( apiKey.key ))),
 					}
 				});
 				let responseJson = await response.json();

@@ -12,12 +12,17 @@ Vue.mixin( {
     return{
       API_URL: {
         YAHOO_LOW_LATENCY: {
-          base: 'https://yahoo-finance-low-latency.p.rapidapi.com',
+          //base: 'https://yahoo-finance-low-latency.p.rapidapi.com',
+          base: 'https://yfapi.net',
           autocomplete: '/v6/finance/autocomplete',
           api_key: [
             {
+              key: 'RXFEM2dnTVpVNDRhc2hlZTJvcnREN1IwbnNodGtYeEo5M1REeENmdA==',
+              status:1
+            },
+            {
               key: 'Zjg0MTg1MjUyNG1zaDJhNWNmOGQ0NTliYjUzMHAxZTA0MGFqc242OGZiZjNkOTdiY2E=',
-              status: 1,
+              status: 0,
             }
           ]
         },
@@ -27,7 +32,7 @@ Vue.mixin( {
           api_key:[
             {
               key: 'Zjg0MTg1MjUyNG1zaDJhNWNmOGQ0NTliYjUzMHAxZTA0MGFqc242OGZiZjNkOTdiY2E=',
-              status: 1,
+              status: 0,
             }
           ]
         }
