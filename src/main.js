@@ -32,7 +32,7 @@ Vue.mixin( {
           api_key:[
             {
               key: 'Zjg0MTg1MjUyNG1zaDJhNWNmOGQ0NTliYjUzMHAxZTA0MGFqc242OGZiZjNkOTdiY2E=',
-              status: 0,
+              status: 1,
             }
           ]
         }
